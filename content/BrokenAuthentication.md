@@ -1,4 +1,5 @@
 # Broken Authentication
+
 Penyerang memiliki akses ke ratusan atau jutaan nama pengguna yang valid dan kombinasi kata sandi untuk pengisian kredensial, administrasi default, daftar akun, brute-force, dan dictioanry attack. Manajemen sesi serangan harus dipahami, terutama dalam kaitannya dengan token sesi yang belum kedaluwarsa.
 
 Prevalensi broken authentication tersebar luas karena desain dan implementasi sebagian besar dari identitas dan kontrol akses. Pengelolaan sesi adalah landasan otentikasi dan akses kontrol, dan ada di semua aplikasi stateful. 
@@ -6,12 +7,11 @@ Prevalensi broken authentication tersebar luas karena desain dan implementasi se
 Penyerang dapat mendeteksi otentikasi yang cacat menggunakan cara manual dan memanfaatkannya dengan menggunakan alat otomatis dengan daftar kata sandi dan serangan dictionary.
 
 
-## Gambar ilustrasi serangan 
-
 ## Cara melakukan eksploit Broken Authentication pada sebuah aplikasi dapat digambarkan dari scenario dibawah ini seperti berikut : 
-    Scenario #1 : 
-        Pengisian kredensial, penggunaan daftar kata sandi yang dikenal, adalah serangan yang umum. Jika aplikasi tidak menerapkan ancaman otomatis atau perlindungan isian kredensial, aplikasi dapat digunakan sebagai oracle sandi atau password oracle untuk menentukan apakah kredensial itu valid.
-    Scenario #2: 
+![](https://i.ibb.co/QnYP3C9/broken-auth.png)
+1.  **Scenario #1** : 
+        Pengisian kredensial, penggunaan daftar kata serangan sandi yang dikenal, adalah serangan yang umum. Jika aplikasi tidak menerapkan ancaman otomatis atau perlindungan isian kredensial, aplikasi dapat digunakan sebagai oracle sandi atau password oracle untuk menentukan apakah kredensial itu valid.
+2.  **Scenario #2**: 
         Waktu tunggu sesi aplikasi atau timeout session tidak disetel dengan benar. Seorang pengguna menggunakan komputer publik untuk mengakses aplikasi. Namun pengguna tersebut terlupa untuk melakukan "logout", pengguna hanya menutup tab browser dan pergi. Penyerang menggunakan browser yang sama satu jam kemudian, dan pengguna masih diautentikasi.
     
 
@@ -34,7 +34,7 @@ Catat semua kegagalan dan beri tahu administrator saat memasukkan kredensial, br
 menghasilkan ID sesi acak baru dengan entropi tinggi setelah login. ID sesi tidak boleh ada di URL, disimpan dengan aman dan tidak valid setelah waktu keluar atau logout.
     
 
-## Saran dalam membangun software untuk kasus tersebut (secure code nya)
+## Saran dalam membangun software untuk kasus tersebut:
 Berikut contoh kode yang baik, untuk menghindari kerentanan broken authentication : 
 ``` php
 // Generate password hash
@@ -50,18 +50,18 @@ var user = {
 };
 ```
 
-d
+
+# [Latihan eksploit Web Rentan](https://juice-shop.herokuapp.com/)
 
 ## Referensi Kerawanan
-• OWASP Proactive Controls: Implement Identity and 
-Authentication Controls 
-• OWASP ASVS: V2 Authentication, V3 Session Management 
-• OWASP Testing Guide: Identity, Authentication 
-• OWASP Cheat Sheet: Authentication 
-• OWASP Cheat Sheet: Credential Stuffing 
-• OWASP Cheat Sheet: Forgot Password 
-• OWASP Cheat Sheet: Session Management 
-• OWASP Automated Threats Handbook 
-• NIST 800-63b: 5.1.1 Memorized Secrets 
-• CWE-287: Improper Authentication 
-• CWE-384: Session Fixation 
+##### • OWASP Proactive Controls: Implement Identity and Authentication Controls
+##### • OWASP ASVS: V2 Authentication, V3 Session Management 
+##### • OWASP Testing Guide: Identity, Authentication 
+##### • OWASP Cheat Sheet: Authentication 
+##### • OWASP Cheat Sheet: Credential Stuffing 
+##### • OWASP Cheat Sheet: Forgot Password 
+##### • OWASP Cheat Sheet: Session Management 
+##### • OWASP Automated Threats Handbook 
+##### • NIST 800-63b: 5.1.1 Memorized Secrets 
+##### • CWE-287: Improper Authentication 
+##### • CWE-384: Session Fixation 

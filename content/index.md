@@ -2,6 +2,7 @@
 ― Henry David Thoreau, Walden*
 
 ## **Software Development Life Cycle**
+![](https://i.ibb.co/M8ZCRHW/gambar-sdlc.png)
 ### Apa Itu Software Development Life Cycle?
 *Software Development Life Cycle* (SDLC) adalah tahapan seorang pengembang perangkat lunak dalam mengembangkan perangkat lunaknya kepada klien dimulai dari perencanaan sampai dengan ke tahap *maintenance*.
 ### Apa Manfaat Penggunaan Software Development Life Cycle?
@@ -18,7 +19,7 @@ SDLC tidak hanya sekedar tahapan yang mengatur pembuatan perangkat lunak tetapi 
 ### Kenapa Ada Secure Software Development Life Cycle?
 Tahap pengujian keamanan yang difokuskan pada satu tahap saja, yaitu pengujian, menimbulkan beberapa permasalahan keamanan yang baru ditemukan sangat banyak dan membutuhkan usaha lebih untuk memperbaikinya. Bahkan beberapa celah keamanan tidak terdeteksi sama sekali dan pada akhirnya menimbulkan kerugian besar. Diantara banyak kerawanan yang ada, *Open Web Application Security Project* (OWASP) mempublikasikan 10 kerentanan yang sering muncul pada aplikasi web yaitu OWASP Top 10 yang terdiri dari *Injection, Broken Authentication, Sensitive Data Exposure, XML External Entities (XEE), Broken Access Control, Security Misconfiguration, Cross-Site Scripting (XSS), Insecure Desentralization, Using Components with Known Vulnerabilities, Insufficient Logging & Monitoring*.
 
-## **OWASP Top 10**
+## **5 Kerentanan berdasarkan OWASP Top 10**
 ### [• A1:2017-Injection](Injection)
 Kerentanan *Injection* seperti SQL, NoSQL, OS, dan Injeksi LDAP, terjadi saat **data tidak terpercaya dikirim** kepada interpreter **sebagai** bagian dari **perintah atau query**.
 ### [• A2:2017-Broken Authentication](BrokenAuthentication)
