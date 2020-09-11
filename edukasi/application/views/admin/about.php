@@ -14,7 +14,7 @@
 				<table class="table bg-light table-bordered text-light">
 					<tr>
 						<td>Application Name</td>
-						<td>NewsOne</td>
+						<td>Media Edkuasi Top 10 OWASP</td>
 					</tr>
 					<tr>
 						<td>Application Version</td>
@@ -22,11 +22,11 @@
 					</tr>
 					<tr>
 						<td>License</td>
-						<td>MIT License</td>
+						<td>BSSN</td>
 					</tr>
 					<tr>
 						<td>Developed by</td>
-						<td>Diki Siswanto</td>
+						<td>Kelompok 7 PKL 2020/2021</td>
 					</tr>
 					<tr>
 						<td>Template Name</td>
@@ -38,7 +38,7 @@
 					</tr>
 					<tr>
 						<td>Last Updated</td>
-						<td>December, 15 2018</td>
+						<td>September, 18 2020</td>
 					</tr>
 				</table>
 			</div>

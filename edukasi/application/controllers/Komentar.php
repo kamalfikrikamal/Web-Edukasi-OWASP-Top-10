@@ -20,7 +20,7 @@ class Komentar extends CI_Controller {
         $nama           = $this->input->post('nama');
         $email          = $this->input->post('email');
         $isi_komentar   = $this->input->post('isi');
-        $this->db->query("INSERT INTO table_comment VALUES('','0','$nama','$email','$isi_komentar','$id')");
+        $this->db->query("INSERT INTO table_comment VALUES('','0','$nama','$email','$isi_komentar','$id','0')");
         redirect('komentar/detail/'.$id); 
     } 
 

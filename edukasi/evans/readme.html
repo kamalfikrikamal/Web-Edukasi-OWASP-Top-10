@@ -52,9 +52,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end">
           <div class="col-md-9 ftco-animate pb-5">
-            <h2 class="mb-3 bread">A5:2017</h2>
-            <h2 class="mb-3 bread"> Broken Access Control</h2>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Broken Access Control <i class="ion-ios-arrow-forward"></i></span></p>
+            <h2 class="mb-3 bread">Risiko-Risiko Keamanan Aplikasi</h2>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Readme <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -63,74 +62,41 @@
     <section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-10 order-md-last ftco-animate">            
-            <h2 class="mb-3 h1">A5:2017 Broken Access Control</h2>
-            <p> Berdasarkan OWASP Top 10 2017, Broken Access Control secara umum dapat digambarkan seperti gambar dibawah ini : </p>
-            <p> <img src="images/t5.png" alt="" class="img-fluid"> 
-            Berdasarkan gambar diatas, agen ancaman kerentanan Broken Access Control bergantung kepada spesifikasi aplikasi yang dimiliki. 
-            Kerentanan Broken Access Control memiliki skor rata-rata untuk dapat dieksploitasi oleh agen ancaman dan memiliki skor 2 didalam OWASP Risk Rating.
-            Kerentanan ini keberadaanya umum pada aplikasi dan memiliki skor rata-rata untuk dideteksi kerentanannya.
-            Dampak teknis dari kerentanan Broken Access Control termasuk kedalam dampak yang berat dan untuk dampak bisnis bergantung kepada aplikasi.
-             </p>
-            <p>
-              <img src="images/bac.png" alt="" class="img-fluid">
-            </p>
-            <p>
-              <ol type="1">
-                <li>Melewati pemeriksaan kontrol akses dengan memodifikasi URL, status aplikasi internal, atau halaman HTML, atau cukup menggunakan alat serangan API khusus</li>
-                <li>Mengizinkan kunci utama untuk diubah ke pengguna lain merekam, mengizinkan melihat atau mengedit akun orang lain</li>
-                <li>Peninggian hak istimewa. Bertindak sebagai pengguna tanpa masuk, atau bertindak sebagai admin saat masuk sebagai pengguna</li>
-                <li>Manipulasi metadata, seperti memutar ulang atau merusak sebuah JSON Web Token (JWT) token kontrol akses atau cookie atau bidang tersembunyi dimanipulasi untuk meningkatkan hak istimewa, atau menyalahgunakan JWT penghapusan</li>
-                <li>Kesalahan konfigurasi CORS memungkinkan akses API yang tidak sah.</li>
-                <li>Paksa penjelajahan ke halaman yang diautentikasi sebagai tidak diautentikasi pengguna atau ke halaman istimewa sebagai pengguna standar. Mengakses API dengan kontrol akses yang hilang untuk POST, PUT dan DELETE.</li>
-              </ol> 
-            </p>
-            <h2 class="mb-3 h1">Kode rentan yang dapat menyebabkan Broken Access Control adalah sebagai berikut :</h2>
-            <p>
-              Skenario # 1: Aplikasi menggunakan data yang belum diverifikasi dalam panggilan SQL yang mengakses informasi akun:
-              <figure>
-                <figcaption>Contoh Source Code: </figcaption>
-                <pre>
-                  <code>
-                    pstmt.setString (1, request.getParameter ("acct"));
-                    Hasil ResultSet = pstmt.executeQuery ();
-                  </code>
-                </pre>
-              </figure>
-
-              Seorang penyerang cukup mengubah parameter 'acct' di browser menjadi kirim nomor rekening apapun yang mereka inginkan. Jika tidak benar diverifikasi, penyerang dapat mengakses akun pengguna mana pun.
-              <figure>
-                <figcaption>Contoh Source Code: </figcaption>
-                <pre>
-                  <code>
-                    http://example.com/app/accountInfo?acct=notmyacct
-                  </code>
-                </pre>
-              </figure>
-
-              Skenario # 2: Penyerang memaksa penjelajahan ke URL target. Hak admin diperlukan untuk mengakses halaman admin.
-              <figure>
-                <figcaption>Contoh Source Code: </figcaption>
-                <pre>
-                  <code>
-                    http://example.com/app/getappInfo
-                    http://example.com/app/admin_getappInfo
-                  </code>
-                </pre>
-              </figure>
-              Jika pengguna yang tidak diautentikasi dapat mengakses salah satu halaman, itu cacat. Jika sebuah non-admin dapat mengakses halaman admin, ini cacat.
-            </p>
+          <div class="col-lg-10 order-md-last ftco-animate"> 
+            <img src="images/boi.png" style="float:left;" >            
+            <h2 class="mb-3 h1">Apa Saja Risiko-Risiko Keamanan Aplikasi? </h2>
+            <p>Penyerang berpotensi menggunakan berbagai macam cara melalui aplikasi untuk membahayakan bisnis atau organisasi Anda. Setiap cara mewakili risiko, yang mungkin cukup serius hingga memperoleh perhatian oleh orang-orang. </p>
+            <p>Sebelum, menjelaskan bagaimana attacker melakukan penyerangan, pembaca harus mengerti terlebih dahulu istilah-istilah yang akan digunakan pada postingan di web ini.</p>
+            <p>Untuk setiap risiko yang akan dijelaskan pada web ini, akan diberikan informasi umum mengenai kemungkinan dan dampak teknis dengan menggunakan skema penilaian sederhana berikut, yang berdasarkan pada OWASP Risk Rating Methodology.</p>
             
-            <h2 class="mb-3 h1">Bagaimana mitigasi untuk Broken Access Control?</h2>
+            <figure>
+              <figcaption>Tabel Skema Penilaian Berdasarkan OWASP Risk Rating Methodology</figcaption>
+                      <img src="images/rate.png" class="img-fluid"> 
+            </figure>
+            
+            <h2 class="mb-3 h1">1. Threat Agents: </h2>
+            <p>Threat Agents atau juga dikenal dengan agen ancaman adalah pelaku yang melakukan penyerangan terhadap aplikasi. </p>
+            <h2 class="mb-3 h1">2. Attack Vectors: </h2>
+            <p>Attack Vectors adalah jalur atau cara yang dapat digunakan oleh attacker untuk melakukan penyerangan atau mengakses sebuah system. </p>
+            <h2 class="mb-3 h1">3. Security Weaknesses: </h2>
             <p>
-              <ul>
-                <li>Melakukan pembagian jenis pengguna.</li>
-                <li>Tentukan terlebih dahulu daftar kontrol akses dan hak yang dimilkinya.</li>
-                <li>Jangan hanya menyembunyikan fungsi tapi lakukan pengamanan pada fungsi tersebut.</li>
-              </ul> 
+              Security weaknesses adalah kelemahan-kelemahan yang dapat dimanfaatkan oleh seorang penyerang
             </p>
-            <p><a href="https://juice-shop.herokuapp.com/" class="btn btn-primary py-3 px-4">Latihan Eksploit Web Rentan</a></p>
-          
+            <h2 class="mb-3 mt-5 h1">4. Security Controls: </h2>
+            <p>
+              Security controls adalah parameter yang diterapkan untuk melindungi berbagai bentuk data dan infrastruktur yang penting bagi bisnis atau
+            </p>            
+            <h2 class="mb-3 mt-5 h1">5. Technical Impact: </h2>
+            <p>Technical impact adalah dampak teknis yang ditimbulkan dari gangguan terhadap sistem keamanan
+            </p>
+            <h2 class="mb-3 mt-5 h1">6. Business Impact: </h2>
+            <p>
+            Business impact adalah dampak yang ditimbulkan pada bidang bisnis dari gangguan terhadap kegiatan yang mendukung layanan keamanan
+            </p>
+            <h2 class="mb-3 mt-5 h1"># </h2>
+            <p> Dengan adanya tabel diatas, diharapkan tabel tersebut dapat membantu pembaca web ini dalam menghitung kemungkinan dan dampak risiko yang ada pada aplikasi pembaca</p>
+            <p>Setiap organisasi adalah unik, dan begitu pula aktor ancaman untuk organisasi tersebut, tujuan mereka, dan dampak dari pelanggaran apa pun</p>
+            <p>Penting untuk memahami risiko bagi organisasi Anda berdasarkan agen ancaman dan dampak bisnis yang berlaku. Oleh karena itu, pada web ini akan memberikan informasi tersebut untuk memudahkan pembaca dalam memahami risiko bagi perusahaan atau organisasi pembaca</p>
             <div class="pt-5 mt-5">
               <h3 class="mb-5">6 Comments</h3>
               <ul class="comment-list">

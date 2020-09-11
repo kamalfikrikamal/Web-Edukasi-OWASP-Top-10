@@ -25,6 +25,6 @@
 				$this->session->sess_destroy();
 			}
 
-			redirect('../newsone');
+			redirect('../edukasi');
 		}
 	}

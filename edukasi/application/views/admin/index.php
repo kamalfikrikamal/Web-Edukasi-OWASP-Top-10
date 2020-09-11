@@ -49,36 +49,14 @@
           </form>
           <div class="nav-wrapper">
             <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link <?= $this->uri->segment(1) === 'dashboard' && $this->uri->segment(2) === NULL ? 'active' : '' ?>" href="<?= base_url('dashboard') ?>">
-                  <i class="material-icons">home</i>
-                  <span>News Dashboard</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link <?= $this->uri->segment(2) === 'create' ? 'active' : ''?>" href="<?= base_url('news/create') ?>">
-                  <i class="material-icons">note_add</i>
-                  <span>Add New Post</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link <?= $this->uri->segment(1) === 'news' && $this->uri->segment(2) === NULL ? 'active' : '' ?>" href="<?= base_url('news') ?>">
-                  <i class="material-icons">notes</i>
-                  <span>All Posts</span>
-                </a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link <?= $this->uri->segment(1) === 'comment' && $this->uri->segment(2) === NULL ? 'active' : '' ?>" href="<?= base_url('comment') ?>">
                   <i class="material-icons">notes</i>
                   <span>Manage Comment</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link <?= $this->uri->segment(1) === 'categories'  ? 'active' : '' ?>" href="<?= base_url('categories') ?>">
-                  <i class="material-icons">category</i>
-                  <span>Categories</span>
-                </a>
-              </li>
+            
               <li class="nav-item">
                 <a class="nav-link  <?= $this->uri->segment(2) === 'about'  ? 'active' : '' ?>" href="<?= site_url('dashboard/about') ?>">
                   <i class="material-icons">info</i>

@@ -38,7 +38,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="<?php echo site_url('./')?>" class="nav-link">Home</a></li>
+       
 	        	<li class="nav-item"><a href="<?php echo site_url('about')?>" class="nav-link">About</a></li>
 	        	<li class="nav-item active"><a href="<?php echo site_url('work')?>" class="nav-link">OWASP Top 10</a></li>
 	          <li class="nav-item"><a href="<?php echo site_url('contact')?>" class="nav-link">Contact</a></li>

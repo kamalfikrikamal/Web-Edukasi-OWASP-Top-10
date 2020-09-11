@@ -65,6 +65,13 @@
         <div class="row justify-content-center">
           <div class="col-lg-10 order-md-last ftco-animate">            
             <h2 class="mb-3 h1">A4:2017 XML External Entities (XXE) </h2>
+            <p> Berdasarkan OWASP Top 10 2017, XML External Entities (XXE) secara umum dapat digambarkan seperti gambar dibawah ini : </p>
+            <p> <img src="images/t4.png" alt="" class="img-fluid"> 
+            Berdasarkan gambar diatas, agen ancaman kerentanan XML External Entities (XXE) bergantung kepada spesifikasi aplikasi yang dimiliki. 
+            Kerentanan XML External Entities (XXE) memiliki skor rata-rata untuk dapat dieksploitasi oleh agen ancaman dan memiliki skor 2 didalam OWASP Risk Rating.
+            Kerentanan ini keberadaanya umum pada aplikasi dan mudah untuk dideteksi kerentanannya.
+            Dampak teknis dari kerentanan XML External Entities (XXE) termasuk kedalam dampak yang berat dan untuk dampak bisnis bergantung kepada aplikasi.
+             </p>
             <p>Penyerang dapat melakukan eksploitasi kerawanan kepada pemrosesan XML jika mereka dapat mengunggah XML atau memasukkan kode-kode jahat pada dokumen XML untuk mengeksploitasi kode yang memiliki kerawanan.</p>
             <p>XXE dapat terjadi biasanya karena banyak XML lama yang mengizinkan spesifikasi yang berasal dari entitas eksternal, yaitu URL yang sedang ditangguhkan dan dievaluasi selama pemrosesan XML. SAST (Source Code Analysis Tools) dapat menemukan masalah ini dengan memeriksa konfigurasinya. tester manual perlu mengetahui cara menguji kerawanan XXE, karena pada tahun 2017 masih belum umum untuk diuji.</p>
             <p>Dampak dari kerawanan ini adalah dapat digunakan untuk mengekstrak data, menjalankan permintaan untuk dapat mengendalikan server dari jarak jauh, memindai sistem internal, melakukan serangan DOS (denial-of-service), serta serangan lainnya.</p>
