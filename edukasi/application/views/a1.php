@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <style>
+		#myBtn {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		background-color: red;
+		color: white;
+		cursor: pointer;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
+		#myBtn:hover {
+		background-color: #555;
+		}
+
+	</style>
     <title>BSSN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,6 +51,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+		
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+		
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
       
@@ -66,6 +110,13 @@
         <div class="row justify-content-center">
           <div class="col-lg-10 order-md-last ftco-animate">            
             <h2 class="mb-3 h1">A1:2017 Injection</h2>
+            <p> Berdasarkan OWASP Top 10 2017, Injection secara umum dapat digambarkan seperti gambar dibawah ini : </p>
+            <p> <img src="assets/images/t1.png" alt="" class="img-fluid"> 
+            Berdasarkan gambar diatas, agen ancaman Injection bergantung kepada spesifikasi aplikasi yang dimiliki. 
+            Kerentanan Injection dapat dieksploitasi secara mudah oleh agen ancaman dan memiliki skor 3 didalam OWASP Risk Rating.
+            Kerentanan ini keberadaanya umum pada aplikasi-aplikasi dan mudah untuk dideteksi kerentanannya.
+            Dampak teknis dari kerentanan Injetion termasuk kedalam dampak yang berat dan untuk dampak bisnis bergantung pada kebutuhan aplikasi dan data.
+             </p>
             <p>Kerentanan injeksi, seperti injeksi SQL, NoSQL, OS dan LDAP, terjadi ketika data yang tidak terpercaya dikirim ke penerjemah sebagai bagian dari perintah atau kueri. Data tersebut dapat membuat aplikasi menjalankan perintah yang tidak diinginkan atau mengakses data tanpa otorisasi yang tepat. Pada kali ini, akan dijelaskan mengenai kerentanan SQL Injection yang ada pada sebuah aplikasi.</p>
             <h2 class="mb-3 h1">Kode rentan yang dapat menyebabkan SQL Injection adalah sebagai berikut :</h2>
             <p>Jika menggunakan kode tersebut, dapat menyebabkan attcker melakukan injeksi kode kedalam kueri SQL.</p>

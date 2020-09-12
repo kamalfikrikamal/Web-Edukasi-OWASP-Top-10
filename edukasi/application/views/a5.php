@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <style>
+		#myBtn {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		background-color: red;
+		color: white;
+		cursor: pointer;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
+		#myBtn:hover {
+		background-color: #555;
+		}
+
+	</style>
     <title>BSSN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,6 +51,28 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
   </head>
   <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+		
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+		
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
       <a class="navbar-brand" href="<?php echo site_url('login')?>">Login Admin</a>
@@ -66,6 +110,13 @@
         <div class="row justify-content-center">
           <div class="col-lg-10 order-md-last ftco-animate">            
             <h2 class="mb-3 h1">A5:2017 Broken Access Control</h2>
+            <p> Berdasarkan OWASP Top 10 2017, Broken Access Control secara umum dapat digambarkan seperti gambar dibawah ini : </p>
+            <p> <img src="assets/images/t5.png" alt="" class="img-fluid"> 
+            Berdasarkan gambar diatas, agen ancaman kerentanan Broken Access Control bergantung kepada spesifikasi aplikasi yang dimiliki. 
+            Kerentanan Broken Access Control memiliki skor rata-rata untuk dapat dieksploitasi oleh agen ancaman dan memiliki skor 2 didalam OWASP Risk Rating.
+            Kerentanan ini keberadaanya umum pada aplikasi dan memiliki skor rata-rata untuk dideteksi kerentanannya.
+            Dampak teknis dari kerentanan Broken Access Control termasuk kedalam dampak yang berat dan untuk dampak bisnis bergantung kepada aplikasi.
+             </p>
             <p>
               <img src="assets/images/bac.png" alt="" class="img-fluid">
             </p>
@@ -168,6 +219,7 @@
         </div>
       </div>
     </footer>
+    
     
   
 

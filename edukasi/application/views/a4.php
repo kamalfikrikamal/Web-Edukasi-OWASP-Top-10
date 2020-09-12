@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <style>
+		#myBtn {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		background-color: red;
+		color: white;
+		cursor: pointer;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
+		#myBtn:hover {
+		background-color: #555;
+		}
+    </style>
     <title>BSSN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,6 +50,28 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
   </head>
   <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+		
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+		
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
       <a class="navbar-brand" href="<?php echo site_url('login')?>">Login Admin</a>
@@ -66,6 +109,15 @@
         <div class="row justify-content-center">
           <div class="col-lg-10 order-md-last ftco-animate">            
             <h2 class="mb-3 h1">A4:2017 XML External Entities (XXE) </h2>
+
+            <p> Berdasarkan OWASP Top 10 2017, XML External Entities (XXE) secara umum dapat digambarkan seperti gambar dibawah ini : </p>
+            <p> <img src="assets/images/t4.png" alt="" class="img-fluid"> 
+            Berdasarkan gambar diatas, agen ancaman kerentanan XML External Entities (XXE) bergantung kepada spesifikasi aplikasi yang dimiliki. 
+            Kerentanan XML External Entities (XXE) memiliki skor rata-rata untuk dapat dieksploitasi oleh agen ancaman dan memiliki skor 2 didalam OWASP Risk Rating.
+            Kerentanan ini keberadaanya umum pada aplikasi dan mudah untuk dideteksi kerentanannya.
+            Dampak teknis dari kerentanan XML External Entities (XXE) termasuk kedalam dampak yang berat dan untuk dampak bisnis bergantung kepada aplikasi.
+             </p>
+
             <p>Penyerang dapat melakukan eksploitasi kerawanan kepada pemrosesan XML jika mereka dapat mengunggah XML atau memasukkan kode-kode jahat pada dokumen XML untuk mengeksploitasi kode yang memiliki kerawanan.</p>
             <p>XXE dapat terjadi biasanya karena banyak XML lama yang mengizinkan spesifikasi yang berasal dari entitas eksternal, yaitu URL yang sedang ditangguhkan dan dievaluasi selama pemrosesan XML. SAST (Source Code Analysis Tools) dapat menemukan masalah ini dengan memeriksa konfigurasinya. tester manual perlu mengetahui cara menguji kerawanan XXE, karena pada tahun 2017 masih belum umum untuk diuji.</p>
             <p>Dampak dari kerawanan ini adalah dapat digunakan untuk mengekstrak data, menjalankan permintaan untuk dapat mengendalikan server dari jarak jauh, memindai sistem internal, melakukan serangan DOS (denial-of-service), serta serangan lainnya.</p>

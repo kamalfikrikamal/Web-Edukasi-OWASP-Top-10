@@ -82,9 +82,8 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-         
 	        	<li class="nav-item"><a href="<?php echo site_url('about')?>" class="nav-link">About</a></li>
-	        	<li class="nav-item active"><a href="<?php echo site_url('work')?>" class="nav-link">OWASP Top 10</a></li>
+	        	<li class="nav-item active"><a href="<?php echo site_url('overview')?>" class="nav-link">OWASP Top 10</a></li>
 	          <li class="nav-item"><a href="<?php echo site_url('contact')?>" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -97,9 +96,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end">
           <div class="col-md-9 ftco-animate pb-5">
-            <h2 class="mb-3 bread">A2:2017</h2>
-            <h2 class="mb-3 bread">Broken Authentication</h2>
-            <p class="breadcrumbs"><span class="mr-2"><a href="<?php echo site_url('./')?>">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Broken Authentication <i class="ion-ios-arrow-forward"></i></span></p>
+            <h2 class="mb-3 bread">Risiko-Risiko Keamanan Aplikasi</h2>
+            <p class="breadcrumbs"><span class="mr-2"><a href="<?php echo site_url('overview')?>">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Readme <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -108,60 +106,42 @@
     <section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-10 order-md-last ftco-animate">            
-            <h2 class="mb-3 h1">A2:2017 Broken Authentication</h2>
-            <p> <img src="assets/images/t2.png" alt="" class="img-fluid"> 
-            Berdasarkan gambar diatas, agen ancaman kerentanan Broken Authentication bergantung kepada spesifikasi aplikasi yang dimiliki. 
-            Kerentanan Broken Authentication dapat dieksploitasi secara mudah oleh agen ancaman dan memiliki skor 3 didalam OWASP Risk Rating.
-            Kerentanan ini keberadaanya umum pada aplikasi-aplikasi dan memiliki skor rata-rata untuk dideteksi kerentanannya.
-            Dampak teknis dari kerentanan Broken Authentication termasuk kedalam dampak yang berat dan untuk dampak bisnis bergantung kepada aplikasi.
-             </p>
-
-            <p>Penyerang memiliki akses ke ratusan atau jutaan nama pengguna yang valid dan kombinasi kata sandi untuk pengisian kredensial, administrasi default, daftar akun, brute-force, dan dictioanry attack. Manajemen sesi serangan harus dipahami, terutama dalam kaitannya dengan token sesi yang belum kedaluwarsa.</p>
-            <p>Prevalensi broken authentication tersebar luas karena desain dan implementasi sebagian besar dari identitas dan kontrol akses. Pengelolaan sesi adalah landasan otentikasi dan akses kontrol, dan ada di semua aplikasi stateful.</p>
-            <p>Penyerang dapat mendeteksi otentikasi yang cacat menggunakan cara manual dan memanfaatkannya dengan menggunakan alat otomatis dengan daftar kata sandi dan serangan dictionary.</p>
-            <h2 class="mb-3 h1">Cara melakukan eksploit Broken Authentication pada sebuah aplikasi dapat digambarkan dari scenario dibawah ini seperti berikut:</h2>
+          <div class="col-lg-10 order-md-last ftco-animate"> 
+            <img src="assets/images/boi.png" style="float:left;" >            
+            <h2 class="mb-3 h1">Apa Saja Risiko-Risiko Keamanan Aplikasi? </h2>
+            <p>Penyerang berpotensi menggunakan berbagai macam cara melalui aplikasi untuk membahayakan bisnis atau organisasi Anda. Setiap cara mewakili risiko, yang mungkin cukup serius hingga memperoleh perhatian oleh orang-orang. </p>
+            <p>Sebelum, menjelaskan bagaimana attacker melakukan penyerangan, pembaca harus mengerti terlebih dahulu istilah-istilah yang akan digunakan pada postingan di web ini.</p>
+            <p>Untuk setiap risiko yang akan dijelaskan pada web ini, akan diberikan informasi umum mengenai kemungkinan dan dampak teknis dengan menggunakan skema penilaian sederhana berikut, yang berdasarkan pada OWASP Risk Rating Methodology.</p>
+            
+            <figure>
+              <figcaption>Tabel Skema Penilaian Berdasarkan OWASP Risk Rating Methodology</figcaption>
+                      <img src="assets/images/rate.png" class="img-fluid"> 
+            </figure>
+            
+            <h2 class="mb-3 h1">1. Threat Agents: </h2>
+            <p>Threat Agents atau juga dikenal dengan agen ancaman adalah pelaku yang melakukan penyerangan terhadap aplikasi. </p>
+            <h2 class="mb-3 h1">2. Attack Vectors: </h2>
+            <p>Attack Vectors adalah jalur atau cara yang dapat digunakan oleh attacker untuk melakukan penyerangan atau mengakses sebuah system. </p>
+            <h2 class="mb-3 h1">3. Security Weaknesses: </h2>
             <p>
-              <img src="assets/images/brokenauth.png" alt="" class="img-fluid">
+              Security weaknesses adalah kelemahan-kelemahan yang dapat dimanfaatkan oleh seorang penyerang
             </p>
-            <p>Scenario #1 : Pengisian kredensial, penggunaan daftar kata serangan sandi yang dikenal, adalah serangan yang umum. Jika aplikasi tidak menerapkan ancaman otomatis atau perlindungan isian kredensial, aplikasi dapat digunakan sebagai oracle sandi atau password oracle untuk menentukan apakah kredensial itu valid.</p>
-            <p>Scenario #2: Waktu tunggu sesi aplikasi atau timeout session tidak disetel dengan benar. Seorang pengguna menggunakan komputer publik untuk mengakses aplikasi. Namun pengguna tersebut terlupa untuk melakukan "logout", pengguna hanya menutup tab browser dan pergi. Penyerang menggunakan browser yang sama satu jam kemudian, dan pengguna masih diautentikasi.</p>
-            <h2 class="mb-3 mt-5 h1">Mitigasi yang dapat dilakukan untuk menghindari adanya kerentanan Broken Authentication adalah sebagai berikut:</h2>
+            <h2 class="mb-3 mt-5 h1">4. Security Controls: </h2>
             <p>
-              <ol type="1">
-                <li>Terapkan otentikasi multi-faktor untuk mencegah pengisian otomatis, kredensial, dan pencurian kredensial menggunakan re-use attack. Multi-faktor Authentication sejauh ini merupakan pertahanan terbaik terhadap sebagian besar serangan yang berkaitan dengan password atau kata sandi termasuk serangan brute-force, dengan analisis yang dilakukan oleh Microsoft menunjukkan bahwa itu akan menghentikan 99,9% penyusupan akun.</li>
-                <li>Jangan mengirim atau menyebarkan dengan kredensial default apa pun, khususnya untuk pengguna admin.</li>
-                <li>Menerapkan pemeriksaan kata sandi yang lemah, seperti pengujian baru atau mengubah kata sandi terhadap daftar 10.000 teratas kata sandi terburuk.</li>
-                <li>Sejajarkan panjang sandi, kompleksitas, dan kebijakan rotasi dengan Pedoman NIST 800-63 B Guidelines di bagian 5.1.1 for memorized secrets or other modern, evidence-based password policies.</li>
-                <li>Pastikan pendaftaran, pemulihan kredensial, dan jalur API tersedia dipeerkuat terhadap serangan pencacahan akun dengan menggunakan pesan yang sama untuk semua hasil.</li>
-                <li>Membatasi atau menunda upaya login yang gagal. Catat semua kegagalan dan beri tahu administrator saat memasukkan kredensial, brute force, atau serangan lain yang terdeteksi.</li>
-                <li>Gunakan sisi server, aman, manajer sesi built-in yang menghasilkan ID sesi acak baru dengan entropi tinggi setelah login. ID sesi tidak boleh ada di URL, disimpan dengan aman dan tidak valid setelah waktu keluar atau logout.</li>
-              </ol> 
+              Security controls adalah parameter yang diterapkan untuk melindungi berbagai bentuk data dan infrastruktur yang penting bagi bisnis atau
+            </p>            
+            <h2 class="mb-3 mt-5 h1">5. Technical Impact: </h2>
+            <p>Technical impact adalah dampak teknis yang ditimbulkan dari gangguan terhadap sistem keamanan
             </p>
-            <h2 class="mb-3 mt-5 h1">Saran dalam membangun software untuk kasus tersebut:</h2>
-            <p>Berikut contoh kode yang baik, untuk menghindari kerentanan broken authentication :
-              <figure>
-                <pre>
-                  <code>
-                    // Generate password hash
-                      var salt = bcrypt.genSaltSync();
-                      var passwordHash = bcrypt.hashSync(password, salt);
-
-                      // Create user document
-                      var user = {
-                          userName: userName,
-                          firstName: firstName,
-                          lastName: lastName,
-                          password: passwordHash
-                      };
-                  </code>
-                </pre>
-              </figure>
+            <h2 class="mb-3 mt-5 h1">6. Business Impact: </h2>
+            <p>
+            Business impact adalah dampak yang ditimbulkan pada bidang bisnis dari gangguan terhadap kegiatan yang mendukung layanan keamanan
             </p>
-            <p><a href="https://juice-shop.herokuapp.com/#/" class="btn btn-primary py-3 px-4">Latihan Eksploit Web Rentan</a></p>
-            <p><a href="<?php echo site_url('komentar/detail/2')?>" class="btn btn-primary py-3 px-4">Forum Diskusi</a></p>
+            <h2 class="mb-3 mt-5 h1"># </h2>
+            <p> Dengan adanya tabel diatas, diharapkan tabel tersebut dapat membantu pembaca web ini dalam menghitung kemungkinan dan dampak risiko yang ada pada aplikasi pembaca</p>
+            <p>Setiap organisasi adalah unik, dan begitu pula aktor ancaman untuk organisasi tersebut, tujuan mereka, dan dampak dari pelanggaran apa pun</p>
+            <p>Penting untuk memahami risiko bagi organisasi Anda berdasarkan agen ancaman dan dampak bisnis yang berlaku. Oleh karena itu, pada web ini akan memberikan informasi tersebut untuk memudahkan pembaca dalam memahami risiko bagi perusahaan atau organisasi pembaca</p>
            
-      </div>
     </section> <!-- .section -->
 
     <footer class="ftco-footer ftco-section">

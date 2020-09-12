@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <style>
+		#myBtn {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		background-color: red;
+		color: white;
+		cursor: pointer;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
+		#myBtn:hover {
+		background-color: #555;
+		}
+
+	</style>
     <title>BSSN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,6 +51,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+		
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+		
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="<?php echo site_url('login')?>">Login Admin</a>
@@ -63,6 +107,30 @@
     <section class="ftco-section ftco-portfolio">
     	<div class="container">
     		<div class="row">
+			<div class="col-md-6 portfolio-wrap ftco-animate">
+					<div class="row align-items-center">
+						<div class="col-md-12">
+							<div class="img js-fullheight" style="background-image: url(assets/images/rd.png);">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="text">
+								<div class="px-0 pt-5">
+									<div class="desc">
+										<div class="top top-relative">
+											<span class="subheading"></span>
+											<h2 class="mb-4"><a href="<?php echo site_url('readme')?>">Read me first! Before you start reading the other post here</a></h2> 
+										</div>
+										<div class="absolute relative">
+											<p>Baca terlebih dahulu postingan ini, untuk mempermudah pembaca dalam memahami apa yang ada di website ini!</p>
+											<p><a href="<?php echo site_url('readme')?>" class="custom-btn">Lebih Lengkap</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 	  			<div class="col-md-6 portfolio-wrap ftco-animate">
 	  				<div class="row align-items-center">
 	  					<div class="col-md-12">
