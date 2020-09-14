@@ -158,8 +158,8 @@
                 </pre>
               </figure>
             </p>
-            <p><a href="https://juice-shop.herokuapp.com/#/" class="btn btn-primary py-3 px-4">Latihan Eksploit Web Rentan</a></p>
-            <p><a href="<?php echo site_url('komentar/detail/2')?>" class="btn btn-primary py-3 px-4">Forum Diskusi</a></p>
+            <p><a href="https://juice-shop.herokuapp.com/#/" class="btn btn-black py-3 px-4">Latihan Eksploit Web Rentan</a></p>
+            <p><a href="<?php echo site_url('komentar/detail/2')?>" class="btn btn-black py-3 px-4">Forum Diskusi</a></p>
            
       </div>
     </section> <!-- .section -->

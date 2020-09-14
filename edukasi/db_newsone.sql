@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2020 at 05:37 PM
+-- Generation Time: Sep 14, 2020 at 10:28 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.2.22
 
@@ -105,7 +105,13 @@ CREATE TABLE `table_comment` (
 INSERT INTO `table_comment` (`comment_id`, `comment_status`, `comment_nama`, `comment_email`, `comment_isi`, `comment_content_id`, `is_delete`) VALUES
 (1, 0, 'sukes jaya', 'anditambunan1@gmail.com', 'ksnadkjaskdjaskdbsakbdkjsa', 1, 0),
 (3, 0, 'andi ', 'coba@admin.com', 'andi cek', 4, 0),
-(7, 0, 'andi ', 'akjshdksah@gmail.com', 'sfkjasdkjashf@gmail.com', 2, 0);
+(7, 0, 'andi ', 'akjshdksah@gmail.com', 'sfkjasdkjashf@gmail.com', 2, 0),
+(8, 0, 'andi ', 'anditambunan1@gmail.com', 'sangat bagus', 5, 0),
+(9, 0, 'ini siapa', 'coba@admin.com', 'sfasfas', 1, 0),
+(10, 9, 'andi ', 'sfsf@gmail.com', 'wfsfsafasf', 1, 0),
+(12, 0, 'ini siapa', 'coba@admin.com', 'cek sound', 2, 0),
+(13, 0, 'ini siapa', 'asmdnas@gmail.com', 'test', 2, 0),
+(14, 13, 'andi siapa', 'dsjbfkjdsbgbdsg@gmail.com', 'sudah bisa', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -204,7 +210,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `table_comment`
 --
 ALTER TABLE `table_comment`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`
