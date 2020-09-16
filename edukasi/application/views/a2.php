@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Kembali Keatas</button>
 	<script>
 		//Get the button
 		var mybutton = document.getElementById("myBtn");
