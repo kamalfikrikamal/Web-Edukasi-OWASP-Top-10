@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Kembali Keatas</button>
 	<script>
 		//Get the button
 		var mybutton = document.getElementById("myBtn");
@@ -128,7 +128,7 @@
             </p>
             <h2 class="mb-3 mt-5 h1">4. Security Controls: </h2>
             <p>
-              Security controls adalah parameter yang diterapkan untuk melindungi berbagai bentuk data dan infrastruktur yang penting bagi bisnis atau
+              Security controls adalah parameter yang diterapkan untuk melindungi berbagai bentuk data dan infrastruktur yang penting bagi bisnis atau organisasi.
             </p>            
             <h2 class="mb-3 mt-5 h1">5. Technical Impact: </h2>
             <p>Technical impact adalah dampak teknis yang ditimbulkan dari gangguan terhadap sistem keamanan

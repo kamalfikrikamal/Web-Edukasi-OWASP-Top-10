@@ -117,7 +117,7 @@
             Dampak teknis dari kerentanan Broken Authentication termasuk kedalam dampak yang berat dan untuk dampak bisnis bergantung kepada aplikasi.
              </p>
 
-            <p>Penyerang memiliki akses ke ratusan atau jutaan nama pengguna yang valid dan kombinasi kata sandi untuk pengisian kredensial, administrasi default, daftar akun, brute-force, dan dictioanry attack. Manajemen sesi serangan harus dipahami, terutama dalam kaitannya dengan token sesi yang belum kedaluwarsa.</p>
+            <p>Penyerang memiliki akses ke ratusan atau jutaan nama pengguna yang valid dan kombinasi kata sandi untuk pengisian kredensial, administrasi default, daftar akun, brute-force, dan dictionary attack. Manajemen sesi serangan harus dipahami, terutama dalam kaitannya dengan token sesi yang belum kedaluwarsa.</p>
             <p>Prevalensi broken authentication tersebar luas karena desain dan implementasi sebagian besar dari identitas dan kontrol akses. Pengelolaan sesi adalah landasan otentikasi dan akses kontrol, dan ada di semua aplikasi stateful.</p>
             <p>Penyerang dapat mendeteksi otentikasi yang cacat menggunakan cara manual dan memanfaatkannya dengan menggunakan alat otomatis dengan daftar kata sandi dan serangan dictionary.</p>
             <h2 class="mb-3 h1">Cara melakukan eksploit Broken Authentication pada sebuah aplikasi dapat digambarkan dari scenario dibawah ini seperti berikut:</h2>

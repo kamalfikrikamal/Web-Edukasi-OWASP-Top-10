@@ -119,7 +119,7 @@
              </p>
             <p>Kerentanan injeksi, seperti injeksi SQL, NoSQL, OS dan LDAP, terjadi ketika data yang tidak terpercaya dikirim ke penerjemah sebagai bagian dari perintah atau kueri. Data tersebut dapat membuat aplikasi menjalankan perintah yang tidak diinginkan atau mengakses data tanpa otorisasi yang tepat. Pada kali ini, akan dijelaskan mengenai kerentanan SQL Injection yang ada pada sebuah aplikasi.</p>
             <h2 class="mb-3 h1">Kode rentan yang dapat menyebabkan SQL Injection adalah sebagai berikut :</h2>
-            <p>Jika menggunakan kode tersebut, dapat menyebabkan attcker melakukan injeksi kode kedalam kueri SQL.</p>
+            <p>Jika menggunakan kode tersebut, dapat menyebabkan attacker melakukan injeksi kode kedalam kueri SQL.</p>
             <figure>
               <figcaption>Contoh Source Code: </figcaption>
               <pre>
