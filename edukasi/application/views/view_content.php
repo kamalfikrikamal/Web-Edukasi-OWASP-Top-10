@@ -98,9 +98,11 @@
             </div>
         </div>
     <?php endforeach;?>
-    <p><a href="<?php echo site_url('work')?>" class="w3-button w3-block w3-black w3-section w3-padding">Kembali</a></p>
+   
    </body>
-
+ <footer class="ftco-footer ftco-section">
+   <p><a href="<?php echo site_url('work')?>" class="w3-button w3-block w3-black w3-section w3-padding">Kembali</a></p>
+</footer>
 
 
 </html>

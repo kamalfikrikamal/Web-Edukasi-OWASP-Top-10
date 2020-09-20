@@ -158,9 +158,22 @@
                 </pre>
               </figure>
             </p>
+        
             <p><a href="https://juice-shop.herokuapp.com/#/" class="btn btn-black py-3 px-4">Latihan Eksploit Web Rentan</a></p>
             <p><a href="<?php echo site_url('komentar/detail/2')?>" class="btn btn-black py-3 px-4">Forum Diskusi</a></p>
-           
+            <p>Sumber</p>
+            <p>OWASP Proactive Controls: Implement Identity and Authentication Controls</p>
+            <p>OWASP ASVS: V2 Authentication, V3 Session Management  </p>
+            <p>OWASP Testing Guide: Identity, Authentication  </p>
+            <p>OWASP Cheat Sheet: Authentication  </p>
+            <p>OWASP Cheat Sheet: Credential Stuffing  </p>
+            <p>OWASP Cheat Sheet: Forgot Password  </p>
+            <p>OWASP Cheat Sheet: Session Management </p>
+            <p>OWASP Automated Threats Handbook  </p>
+            <p>NIST 800-63b: 5.1.1 Memorized Secrets  </p>
+            <p>CWE-287: Improper Authentication  </p>
+            <p>CWE-384: Session Fixation  </p>
+
       </div>
     </section> <!-- .section -->
 
@@ -229,3 +242,4 @@
     
   </body>
 </html>
+

@@ -183,7 +183,7 @@
                     // This should REALLY be validated too
                     String custname = request.getParameter("customerName");
                     // Perform input validation to detect attacks
-                    String query = "SELECT account_balance FROM user_data WHERE user_name = ? ";
+                    Stri</p>ng query = "SELECT account_balance FROM user_data WHERE user_name = ? ";
                     PreparedStatement pstmt = connection.prepareStatement( query );
                     pstmt.setString( 1, custname);
                     ResultSet results = pstmt.executeQuery( );
@@ -193,7 +193,15 @@
             </p>
             <p><a href="https://juice-shop.herokuapp.com/"  class="btn btn-black py-3 px-4">Latihan Eksploit Web Rentan</a></p>
             <p><a href="<?php echo site_url('komentar/detail/1')?>" class="btn btn-black py-3 px-4">Forum Diskusi</a></p>
-           
+           <p>Sumber : </p>
+           <p>OWASP Proactive Controls: Secure Database Access</p>
+           <p>OWASP ASVS: V5 Input Validation and Encoding</p>
+           <p>OWASP Testing Guide: SQL Injection, Command Injection, and ORM Injection</p>
+           <p>OWASP Cheat Sheet: Injection Prevention</p>
+           <p>OWASP Cheat Sheet: SQL Injection Prevention</p>
+           <p>OWASP Cheat Sheet: Injection Prevention in Java</p>
+           <p>OWASP Cheat Sheet: Query Parameterization</p>
+           <p>OWASP Automated Threats to Web Applications – OAT-014</p>
               </div>
             </div>
 

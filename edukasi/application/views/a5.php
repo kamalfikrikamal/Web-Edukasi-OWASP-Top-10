@@ -176,6 +176,11 @@
             </p>
             <p><a href="https://juice-shop.herokuapp.com/" class="btn btn-black py-3 px-4">Latihan Eksploit Web Rentan</a></p>
             <p><a href="<?php echo site_url('komentar/detail/5')?>" class="btn btn-black py-3 px-4">Forum Diskusi</a></p>
+            <p>Sumber :</p>
+<p>OWASP Proactive Controls: Access Controls</p>
+<p>OWASP Application Security Verification Standard: V4 Access Control</p>
+<p>OWASP Testing Guide: Authorization Testing</p>
+<p>OWASP Cheat Sheet: Access Control</p>
            
     </section> <!-- .section -->
 
